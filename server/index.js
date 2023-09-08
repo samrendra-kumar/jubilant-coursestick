@@ -21,12 +21,12 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-//app.use(
-//cors({
-//	origin:"*",
-//	credentials:true,
-//})
-//)
+app.use(
+cors({
+	origin:"jubilant-coursestick-ht9h-i327g5yhv-samrendra-kumar.vercel.app",
+	credentials:true,
+})
+)
 
 app.use(cors());
 
