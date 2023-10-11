@@ -7,6 +7,12 @@ module.exports = {
       "edu-sa": ["Edu SA Beginner", "cursive"],
       mono: ["Roboto Mono", "monospace"],
     },
+    screens:{
+     sm:'640px',
+     md:'768px',
+     lg:'1024px',
+     xl:'1280px',
+    },
     colors: {
       white: "#fff",
       black: "#000",

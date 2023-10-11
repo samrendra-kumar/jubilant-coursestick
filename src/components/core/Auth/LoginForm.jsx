@@ -1,7 +1,7 @@
 import React from "react";
-import { UseSelector } from "react-redux/es/hooks/useSelector";
+
 import { useDispatch } from "react-redux";
-import { useEffect,useState } from "react";
+import { useState } from "react";
 import {Link, useNavigate } from "react-router-dom";
 import {AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai" ;
 

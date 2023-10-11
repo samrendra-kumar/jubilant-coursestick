@@ -9,6 +9,7 @@ import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiconnector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
+import {Avatar,Menu} from '@mantine/core'
 import ProfileDropdown from "../core/Auth/ProfileDropDown"
 
 function Navbar() {
@@ -19,6 +20,7 @@ function Navbar() {
 
   const [subLinks, setSubLinks] = useState([])
   const [loading, setLoading] = useState(false)
+  const[toggle,setToggle] = useState(false)
 
   useEffect(() => {
     ;(async () => {
@@ -51,7 +53,12 @@ function Navbar() {
           <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
         </Link>
         {/* Navigation links */}
-        <nav className="hidden md:block">
+        
+
+        
+          
+          <div className="sm:flex sm:flex-col md:block" >
+        <nav className=" ">
           <ul className="flex gap-x-6 text-richblack-25">
             {NavbarLinks.map((link, index) => (
               <li key={index}>
@@ -112,8 +119,9 @@ function Navbar() {
             ))}
           </ul>
         </nav>
+        </div>
         {/* Login / Signup / Dashboard */}
-        <div className="hidden items-center gap-x-4 md:flex">
+        <div className=" items-center gap-x-4 lg:flex lg:flex-row md:flex md:flex-row sm:flex sm:flex-col">
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
             <Link to="/dashboard/cart" className="relative">
               <AiOutlineShoppingCart className="text-2xl text-richblack-100" />
@@ -140,9 +148,7 @@ function Navbar() {
           )}
           {token !== null && <ProfileDropdown />}
         </div>
-        <button className="mr-4 md:hidden">
-          <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
-        </button>
+       
       </div>
     </div>
   )
