@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 //app.use(
 //cors({
-//	origin:"jubilant-coursestick-ht9h-i327g5yhv-samrendra-kumar.vercel.app",
+//	origin:"*",
 //	credentials:true,
 //})
 //)

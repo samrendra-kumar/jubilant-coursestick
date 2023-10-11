@@ -1,4 +1,4 @@
-const BASE_URL =  "https://jubilant-coursestick-backend.vercel.app/"
+const BASE_URL =  "https://jubilant-coursestick-backend.vercel.app/api/v1"
 
 /// AUTH ENDPOINTS
 export const endpoints = {
